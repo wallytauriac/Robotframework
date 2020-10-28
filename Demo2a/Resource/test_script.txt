@@ -1,0 +1,44 @@
+*** Settings ***
+Documentation     A test suite with a single test for New Tab
+...               Created by hats' Robotcorder
+Library           Selenium2Library    timeout=10
+
+*** Variables ***
+${BROWSER}    chrome
+${SLEEP}    3
+
+*** Test Cases ***
+New Tab test
+    Open Browser    chrome://newtab/    ${BROWSER}
+    Click Link    //a[@href="https://myaccount.google.com/?utm_source=OGB&tab=rk&utm_medium=app"]
+    Click Link    //a[@href="https://www.google.com/webhp?tab=rw"]
+    Click Link    //a[@href="https://business.google.com/?gmbsrc=ww-ww-ot-gs-z-gmb-l-z-h~z-ogb-u"]
+    Click Link    //a[@href="https://maps.google.com/maps?hl=en&tab=rl"]
+    Click Link    //a[@href="https://www.youtube.com/?gl=US&tab=r1"]
+    Click Link    //a[@href="https://play.google.com/?hl=en&tab=r8"]
+    Click Link    //a[@href="https://news.google.com/nwshp?hl=en&tab=rn"]
+    Click Link    //a[@href="https://mail.google.com/mail/?tab=rm"]
+    Click Link    //a[@href="https://meet.google.com?hs=197&pli=1&authuser=0"]
+    Click Link    //a[@href="https://contacts.google.com/?hl=en&tab=rC"]
+    Click Link    //a[@href="https://drive.google.com/?tab=ro&authuser=0"]
+    Click Link    //a[@href="https://www.google.com/calendar?tab=rc"]
+    Click Link    //a[@href="https://translate.google.com/?hl=en&tab=rT"]
+    Click Link    //a[@href="https://photos.google.com/?tab=rq&pageId=none"]
+    Click Link    //a[@href="https://duo.google.com/?usp=duo_ald"]
+    Click Link    //a[@href="https://www.google.com/shopping?hl=en&source=og&tab=rf"]
+    Click Link    //a[@href="https://www.google.com/finance?tab=re"]
+    Click Link    //a[@href="https://docs.google.com/document/?usp=docs_alc&authuser=0"]
+    Click Link    //a[@href="https://docs.google.com/spreadsheets/?usp=sheets_alc&authuser=0"]
+    Click Link    //a[@href="https://docs.google.com/presentation/?usp=slides_alc&authuser=0"]
+    Click Link    //a[@href="https://books.google.com/bkshp?hl=en&tab=rp"]
+    Click Link    //a[@href="https://www.blogger.com/?tab=rj"]
+    Click Link    //a[@href="https://hangouts.google.com/"]
+    Click Link    //a[@href="https://keep.google.com/u/0"]
+    Click Link    //a[@href="https://jamboard.google.com/?authuser=0&usp=jam_ald"]
+    Click Link    //a[@href="https://classroom.google.com/?authuser=0"]
+    Click Link    //a[@href="https://earth.google.com/web/"]
+    Click Link    //a[@href="https://www.google.com/save"]
+    Click Link    //a[@href="https://artsandculture.google.com/?hl=en&authuser=0"]
+    Click Link    //a[@href="https://www.google.com/intl/en/about/products?tab=rh"]
+
+    Close Browser
