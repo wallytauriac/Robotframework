@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.6 on win32)" generated="20200828 20:42:34.229" rpa="false">
+<suite id="s1" name="BookFlightTestCase" source="C:\Users\wally\Documents\Python\Demo\TestSuite\NextGenDigital\BookFlightTestCase.robot">
+<kw name="Launch Browser" library="BookTestCommon" type="setup">
+<kw name="Open Excel Document" library="ExcelLibrary">
+<doc>Opens xlsx document file.</doc>
+<arguments>
+<arg>filename=C:/Users/wally/Documents/Python/Demo/TestSuite/NextGenDigital/BookFlightTestCase.xlsx</arg>
+<arg>doc_id=docid</arg>
+</arguments>
+<status status="PASS" starttime="20200828 20:42:36.341" endtime="20200828 20:42:36.357"></status>
+</kw>
+<kw name="Get Sheet" library="ExcelLibrary">
+<doc>Returns a page from the current document.</doc>
+<arguments>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<status status="PASS" starttime="20200828 20:42:36.357" endtime="20200828 20:42:36.358"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=2</arg>
+<arg>col_num=2</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${url}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.358" level="INFO">${url} = https://ngendigital.com/demo-application</msg>
+<status status="PASS" starttime="20200828 20:42:36.358" endtime="20200828 20:42:36.358"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=2</arg>
+<arg>col_num=3</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${browser}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.358" level="INFO">${browser} = chrome</msg>
+<status status="PASS" starttime="20200828 20:42:36.358" endtime="20200828 20:42:36.358"></status>
+</kw>
+<kw name="Read Excel Column" library="ExcelLibrary">
+<doc>Returns content of a column from the current sheet of the document.</doc>
+<arguments>
+<arg>col_num=1</arg>
+<arg>row_offset=0</arg>
+<arg>max_num=0</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${testCases}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.359" level="INFO">${testCases} = ['${testcase}', 'TC100', 'TC110', 'TC120', 'TC130', None]</msg>
+<status status="PASS" starttime="20200828 20:42:36.358" endtime="20200828 20:42:36.359"></status>
+</kw>
+<kw name="Read Excel Column" library="ExcelLibrary">
+<doc>Returns content of a column from the current sheet of the document.</doc>
+<arguments>
+<arg>col_num=4</arg>
+<arg>row_offset=0</arg>
+<arg>max_num=0</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${users}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.359" level="INFO">${users} = ['${email}', 'support@ngendigital.com', 'support@ngendigital.com', 'support@ngendigital.com', 'support@ngendigital.com', None]</msg>
+<status status="PASS" starttime="20200828 20:42:36.359" endtime="20200828 20:42:36.359"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=2</arg>
+<arg>col_num=4</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${email}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.360" level="INFO">${email} = support@ngendigital.com</msg>
+<status status="PASS" starttime="20200828 20:42:36.359" endtime="20200828 20:42:36.360"></status>
+</kw>
+<kw name="Read Excel Column" library="ExcelLibrary">
+<doc>Returns content of a column from the current sheet of the document.</doc>
+<arguments>
+<arg>col_num=5</arg>
+<arg>row_offset=0</arg>
+<arg>max_num=0</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${passwords}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.360" level="INFO">${passwords} = ['${psw}', 'abc123', 'abc123', 'abc123', 'abc123', None]</msg>
+<status status="PASS" starttime="20200828 20:42:36.360" endtime="20200828 20:42:36.360"></status>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<doc>Returns content of a cell.</doc>
+<arguments>
+<arg>row_num=2</arg>
+<arg>col_num=5</arg>
+<arg>sheet_name=Sheet1</arg>
+</arguments>
+<assign>
+<var>${psw}</var>
+</assign>
+<msg timestamp="20200828 20:42:36.360" level="INFO">${psw} = abc123</msg>
+<status status="PASS" starttime="20200828 20:42:36.360" endtime="20200828 20:42:36.360"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200828 20:42:36.361" level="INFO">${email} = support@ngendigital.com</msg>
+<status status="PASS" starttime="20200828 20:42:36.361" endtime="20200828 20:42:36.361"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${psw}</arg>
+</arguments>
+<msg timestamp="20200828 20:42:36.361" level="INFO">${psw} = abc123</msg>
+<status status="PASS" starttime="20200828 20:42:36.361" endtime="20200828 20:42:36.361"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200828 20:42:36.362" level="INFO">Opening browser 'chrome' to base url 'https://ngendigital.com/demo-application'.</msg>
+<status status="PASS" starttime="20200828 20:42:36.361" endtime="20200828 20:43:00.895"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:03.896" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:00.895" endtime="20200828 20:43:03.896"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200828 20:43:03.897" endtime="20200828 20:43:06.043"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:42:36.341" endtime="20200828 20:43:06.043"></status>
+</kw>
+<test id="s1-t1" name="Verify Book Flight for TestCase - TC100 - Book Flight Round Trip">
+<kw name="Launch Test" library="BookTestCommon" type="setup">
+<arguments>
+<arg>${email}</arg>
+<arg>${psw}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-015"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:06.047" level="INFO">Selecting frame '//*[@id="iframe-015"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:06.047" endtime="20200828 20:43:06.135"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:08.138" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:06.136" endtime="20200828 20:43:08.138"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_user}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:08.138" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath://input[@type="email"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:08.138" endtime="20200828 20:43:08.342"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${psw}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:08.342" level="INFO">Typing password into text field 'xpath://input[@type="password"]'.</msg>
+<msg timestamp="20200828 20:43:08.396" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200828 20:43:08.450" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200828 20:43:08.342" endtime="20200828 20:43:08.450"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:08.466" level="INFO">Current page contains element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:08.451" endtime="20200828 20:43:08.466"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:08.467" level="INFO">Clicking element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:08.466" endtime="20200828 20:43:08.812"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:10.814" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:08.813" endtime="20200828 20:43:10.814"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:06.046" endtime="20200828 20:43:10.814"></status>
+</kw>
+<kw name="Book Flight Scenarios">
+<arguments>
+<arg>TC100</arg>
+<arg>SUCCESS !! Your flight is booked</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${Book_title}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:10.823" level="INFO">Page title is 'Flight Application | Next Gen Digital'.</msg>
+<status status="PASS" starttime="20200828 20:43:10.816" endtime="20200828 20:43:10.824"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-115"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:10.824" level="INFO">Selecting frame '//*[@id="iframe-115"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:10.824" endtime="20200828 20:43:10.881"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@name="Booking"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:10.881" level="INFO">Clicking button '//*[@name="Booking"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:10.881" endtime="20200828 20:43:11.015"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC130"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${chk_roundtrip}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.018" level="INFO">Clicking element 'xpath://input[@type="checkbox"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.017" endtime="20200828 20:43:11.125"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.015" endtime="20200828 20:43:11.125"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${rad_flight}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.126" level="INFO">Clicking element 'xpath://*[@id="flight"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.126" endtime="20200828 20:43:11.249"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.126" endtime="20200828 20:43:11.250"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC110"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:11.252" endtime="20200828 20:43:11.252"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.250" endtime="20200828 20:43:11.252"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:11.255" endtime="20200828 20:43:11.256"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.253" endtime="20200828 20:43:11.256"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_getfare}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.257" level="INFO">Clicking button 'xpath://*[@id="Book"]/p[4]/button'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.256" endtime="20200828 20:43:11.481"></status>
+</kw>
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current frame contains ``text``.</doc>
+<arguments>
+<arg>${emsg}</arg>
+<arg>loglevel=INFO</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.515" level="INFO">Current frame contains text 'SUCCESS !! Your flight is booked'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.483" endtime="20200828 20:43:11.515"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:10.815" endtime="20200828 20:43:11.516"></status>
+</kw>
+<kw name="Stop Test" library="BookTestCommon" type="teardown">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_logout}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.522" level="INFO">Clicking button '//button[4][@class="tablinks"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.519" endtime="20200828 20:43:11.930"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.518" endtime="20200828 20:43:11.930"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:06.043" endtime="20200828 20:43:11.930" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Verify Book Flight for TestCase - TC110 - Book Flight One Way">
+<kw name="Launch Test" library="BookTestCommon" type="setup">
+<arguments>
+<arg>${email}</arg>
+<arg>${psw}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-015"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:11.942" level="INFO">Selecting frame '//*[@id="iframe-015"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:11.941" endtime="20200828 20:43:12.779"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:14.781" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:12.779" endtime="20200828 20:43:14.781"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_user}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:14.782" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath://input[@type="email"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:14.781" endtime="20200828 20:43:14.965"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${psw}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:14.966" level="INFO">Typing password into text field 'xpath://input[@type="password"]'.</msg>
+<msg timestamp="20200828 20:43:15.014" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200828 20:43:15.074" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200828 20:43:14.966" endtime="20200828 20:43:15.074"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:15.081" level="INFO">Current page contains element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:15.074" endtime="20200828 20:43:15.081"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:15.081" level="INFO">Clicking element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:15.081" endtime="20200828 20:43:15.222"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.224" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:15.223" endtime="20200828 20:43:17.224"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.938" endtime="20200828 20:43:17.225"></status>
+</kw>
+<kw name="Book Flight Scenarios">
+<arguments>
+<arg>TC110</arg>
+<arg>SUCCESS !! Your flight is booked</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${Book_title}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.229" level="INFO">Page title is 'Flight Application | Next Gen Digital'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.226" endtime="20200828 20:43:17.230"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-115"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.230" level="INFO">Selecting frame '//*[@id="iframe-115"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.230" endtime="20200828 20:43:17.262"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@name="Booking"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.262" level="INFO">Clicking button '//*[@name="Booking"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.262" endtime="20200828 20:43:17.361"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC130"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:17.362" endtime="20200828 20:43:17.362"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.362" endtime="20200828 20:43:17.362"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:17.363" endtime="20200828 20:43:17.363"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.363" endtime="20200828 20:43:17.363"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC110"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${rad_flight}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.364" level="INFO">Clicking element 'xpath://*[@id="flight"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.364" endtime="20200828 20:43:17.503"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.363" endtime="20200828 20:43:17.504"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:17.505" endtime="20200828 20:43:17.506"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.505" endtime="20200828 20:43:17.506"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_getfare}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.506" level="INFO">Clicking button 'xpath://*[@id="Book"]/p[4]/button'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.506" endtime="20200828 20:43:17.723"></status>
+</kw>
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current frame contains ``text``.</doc>
+<arguments>
+<arg>${emsg}</arg>
+<arg>loglevel=INFO</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.731" level="INFO">Current frame contains text 'SUCCESS !! Your flight is booked'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.723" endtime="20200828 20:43:17.731"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.225" endtime="20200828 20:43:17.733"></status>
+</kw>
+<kw name="Stop Test" library="BookTestCommon" type="teardown">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_logout}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:17.738" level="INFO">Clicking button '//button[4][@class="tablinks"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:17.737" endtime="20200828 20:43:18.223"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:17.735" endtime="20200828 20:43:18.223"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:11.932" endtime="20200828 20:43:18.224" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Verify Book Flight for TestCase - TC120 - Book Flight plus Hotel Round Trip">
+<kw name="Launch Test" library="BookTestCommon" type="setup">
+<arguments>
+<arg>${email}</arg>
+<arg>${psw}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-015"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:18.241" level="INFO">Selecting frame '//*[@id="iframe-015"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:18.240" endtime="20200828 20:43:18.580"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:20.584" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:18.580" endtime="20200828 20:43:20.584"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_user}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:20.585" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath://input[@type="email"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:20.584" endtime="20200828 20:43:20.760"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${psw}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:20.761" level="INFO">Typing password into text field 'xpath://input[@type="password"]'.</msg>
+<msg timestamp="20200828 20:43:20.812" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200828 20:43:20.869" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200828 20:43:20.760" endtime="20200828 20:43:20.870"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:20.876" level="INFO">Current page contains element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:20.870" endtime="20200828 20:43:20.876"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:20.877" level="INFO">Clicking element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:20.877" endtime="20200828 20:43:21.025"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.028" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:21.025" endtime="20200828 20:43:23.028"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:18.234" endtime="20200828 20:43:23.028"></status>
+</kw>
+<kw name="Book Flight Scenarios">
+<arguments>
+<arg>TC120</arg>
+<arg>SUCCESS !! Your flight is booked</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${Book_title}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.033" level="INFO">Page title is 'Flight Application | Next Gen Digital'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.029" endtime="20200828 20:43:23.033"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-115"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.033" level="INFO">Selecting frame '//*[@id="iframe-115"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.033" endtime="20200828 20:43:23.071"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@name="Booking"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.072" level="INFO">Clicking button '//*[@name="Booking"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.072" endtime="20200828 20:43:23.191"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC130"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${chk_roundtrip}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.192" level="INFO">Clicking element 'xpath://input[@type="checkbox"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.192" endtime="20200828 20:43:23.374"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.191" endtime="20200828 20:43:23.375"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:23.375" endtime="20200828 20:43:23.376"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.375" endtime="20200828 20:43:23.376"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC110"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:23.379" endtime="20200828 20:43:23.380"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.376" endtime="20200828 20:43:23.380"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${rad_flighthotel}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.388" level="INFO">Clicking element 'xpath://*[@id="flighthotel"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.386" endtime="20200828 20:43:23.642"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.382" endtime="20200828 20:43:23.642"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_getfare}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.643" level="INFO">Clicking button 'xpath://*[@id="Book"]/p[4]/button'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.642" endtime="20200828 20:43:23.908"></status>
+</kw>
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current frame contains ``text``.</doc>
+<arguments>
+<arg>${emsg}</arg>
+<arg>loglevel=INFO</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.939" level="INFO">Current frame contains text 'SUCCESS !! Your flight is booked'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.909" endtime="20200828 20:43:23.940"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.028" endtime="20200828 20:43:23.940"></status>
+</kw>
+<kw name="Stop Test" library="BookTestCommon" type="teardown">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_logout}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:23.941" level="INFO">Clicking button '//button[4][@class="tablinks"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:23.941" endtime="20200828 20:43:24.506"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:23.940" endtime="20200828 20:43:24.506"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:18.226" endtime="20200828 20:43:24.509" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Verify Book Flight for TestCase - TC130 - Book Flight plus Hotel One way">
+<kw name="Launch Test" library="BookTestCommon" type="setup">
+<arguments>
+<arg>${email}</arg>
+<arg>${psw}</arg>
+</arguments>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-015"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:24.532" level="INFO">Selecting frame '//*[@id="iframe-015"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:24.531" endtime="20200828 20:43:24.884"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:26.885" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:24.884" endtime="20200828 20:43:26.885"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_user}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:26.885" level="INFO">Typing text 'support@ngendigital.com' into text field 'xpath://input[@type="email"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:26.885" endtime="20200828 20:43:27.062"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_password}</arg>
+<arg>${psw}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:27.063" level="INFO">Typing password into text field 'xpath://input[@type="password"]'.</msg>
+<msg timestamp="20200828 20:43:27.112" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200828 20:43:27.176" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200828 20:43:27.063" endtime="20200828 20:43:27.177"></status>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:27.188" level="INFO">Current page contains element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:27.177" endtime="20200828 20:43:27.188"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:27.189" level="INFO">Clicking element 'xpath://div[@name="SignIn"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:27.188" endtime="20200828 20:43:27.338"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.340" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200828 20:43:27.338" endtime="20200828 20:43:29.340"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:24.529" endtime="20200828 20:43:29.340"></status>
+</kw>
+<kw name="Book Flight Scenarios">
+<arguments>
+<arg>TC130</arg>
+<arg>SUCCESS !! Your flight is booked</arg>
+</arguments>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${Book_title}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.348" level="INFO">Page title is 'Flight Application | Next Gen Digital'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.342" endtime="20200828 20:43:29.348"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>//*[@id="iframe-115"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.349" level="INFO">Selecting frame '//*[@id="iframe-115"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.349" endtime="20200828 20:43:29.388"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@name="Booking"]</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.389" level="INFO">Clicking button '//*[@name="Booking"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.388" endtime="20200828 20:43:29.482"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${chk_roundtrip}</arg>
+<arg>ELSE IF</arg>
+<arg>"${testcase}"=="TC130"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${rad_flighthotel}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.483" level="INFO">Clicking element 'xpath://*[@id="flighthotel"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.483" endtime="20200828 20:43:29.585"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.482" endtime="20200828 20:43:29.585"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC100"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:29.586" endtime="20200828 20:43:29.586"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.585" endtime="20200828 20:43:29.586"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC110"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flight}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:29.586" endtime="20200828 20:43:29.586"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.586" endtime="20200828 20:43:29.586"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${testcase}"=="TC120"</arg>
+<arg>Click Element</arg>
+<arg>${rad_flighthotel}</arg>
+<arg>ELSE</arg>
+<arg>No Operation</arg>
+</arguments>
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" starttime="20200828 20:43:29.587" endtime="20200828 20:43:29.587"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.586" endtime="20200828 20:43:29.587"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_getfare}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.587" level="INFO">Clicking button 'xpath://*[@id="Book"]/p[4]/button'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.587" endtime="20200828 20:43:29.735"></status>
+</kw>
+<kw name="Current Frame Should Contain" library="SeleniumLibrary">
+<doc>Verifies that the current frame contains ``text``.</doc>
+<arguments>
+<arg>${emsg}</arg>
+<arg>loglevel=INFO</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.753" level="INFO">Current frame contains text 'SUCCESS !! Your flight is booked'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.735" endtime="20200828 20:43:29.754"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.341" endtime="20200828 20:43:29.754"></status>
+</kw>
+<kw name="Stop Test" library="BookTestCommon" type="teardown">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${txt_logout}</arg>
+</arguments>
+<msg timestamp="20200828 20:43:29.756" level="INFO">Clicking button '//button[4][@class="tablinks"]'.</msg>
+<status status="PASS" starttime="20200828 20:43:29.755" endtime="20200828 20:43:30.131"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:29.755" endtime="20200828 20:43:30.132"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:24.526" endtime="20200828 20:43:30.133" critical="yes"></status>
+</test>
+<kw name="Stop Browser" library="BookTestCommon" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200828 20:43:30.144" endtime="20200828 20:43:32.463"></status>
+</kw>
+<kw name="Close All Excel Documents" library="ExcelLibrary">
+<doc>Closes all opened documents.</doc>
+<status status="PASS" starttime="20200828 20:43:32.463" endtime="20200828 20:43:32.464"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:43:30.140" endtime="20200828 20:43:32.464"></status>
+</kw>
+<status status="PASS" starttime="20200828 20:42:34.231" endtime="20200828 20:43:32.464"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" id="s1" name="BookFlightTestCase">BookFlightTestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
